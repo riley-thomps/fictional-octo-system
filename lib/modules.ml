@@ -54,7 +54,9 @@ module Substitution : Substitution = struct
   type 'a substitution = ()
 
   let singleton (x : string) (e : 'a expr) : 'a substitution = ()
+  
   let empty : 'a substitution = ()
+  
   let for_all (f : string -> 'a expr -> bool) (subst : 'a substitution) : bool = true
   
   let combine_substitutions (a : 'a substitution option)
