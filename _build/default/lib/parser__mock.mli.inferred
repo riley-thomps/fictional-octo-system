@@ -1,0 +1,20 @@
+type token =
+    VAR of string
+  | TIMES
+  | RPAREN
+  | POW
+  | PLUS
+  | MINUS
+  | LPAREN
+  | INT of int
+  | EQUALS
+  | EOF
+  | DIV
+  | DDX of string
+  | COMMA
+val menhir_begin_marker : int
+val xv_rule : string Ast.rule
+val xv_prog : string Ast.expr
+val xv_exprList : string Ast.expr list
+val xv_expr : string Ast.expr
+val menhir_end_marker : int
